@@ -90,9 +90,9 @@ class ServiceAPI{
     }
   }
 
-  Future<Either<void, String>> deleteFriend(String userToken,friendToken) async {
+  Future<Either<void, String>> deleteFriend(String userToken,friendId) async {
     try {
-      final response = await dio.delete('$baseURL/friends/delete/$userToken/$friendToken');
+      final response = await dio.delete('$baseURL/friends/delete/$userToken/$friendId');
 
       if (response.statusCode == 200) {
         return Success(null);

@@ -70,13 +70,13 @@ class _ListsScreenState extends State<ListsScreen> {
                   return ListTile(
                     title: Text(
                       friend.pseudo,
-                      style: Theme.of(context).textTheme.bodyText1,
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                     leading: const Icon(Icons.people),
                     trailing: IconButton(
                       icon: const Icon(Icons.delete, color: Colors.red),
                       onPressed: () async {
-                        await ServiceAPI().deleteFriend(UserManager.currentUser!.token, friend.token);
+                        await ServiceAPI().deleteFriend(UserManager.currentUser!.token, friend.idFriend!);
                         setState(() {
                           data.value.remove(friend);
                         });

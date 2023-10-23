@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gameforge_app/models/entities/user_friend_or_not.dart';
 import 'package:gameforge_app/models/entities/user_manager.dart';
 import 'package:rxdart/rxdart.dart';
-
 import '../models/either/either.dart';
-import '../models/entities/user.dart';
 import '../services/service_api.dart';
 
 class SearchUser extends StatefulWidget {

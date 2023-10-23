@@ -6,13 +6,14 @@ class User {
   String pseudo;
   String token;
   DateTime tokenDate;
+  String? idFriend;
 
   User({
     required this.email,
     required this.pseudo,
     required this.token,
-    required this.tokenDate
-
+    required this.tokenDate,
+    this.idFriend
   });
 
   Map<String, dynamic> toJson() =>
@@ -30,6 +31,7 @@ class User {
       pseudo: json['pseudo'],
       token: json['token'],
       tokenDate:dateTimeParser.tokenParseDate(json['tokenDate']),
+      idFriend: json['id']
     );
   }
 

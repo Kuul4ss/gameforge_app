@@ -62,7 +62,7 @@ class _FriendRequestsScreenState extends State<FriendRequestsScreen> {
                 IconButton(
                   icon: const Icon(Icons.check, color: Colors.green),
                   onPressed: () async {
-                    await ServiceAPI().acceptFriend(UserManager.currentUser!.token,_friendRequesterList[index].token);
+                    await ServiceAPI().acceptFriend(UserManager.currentUser!.token,_friendRequesterList[index].idFriend!);
                     _loadFriendRequests();
                     setState(() {
                       _friendRequesterList.removeAt(index);
@@ -72,7 +72,7 @@ class _FriendRequestsScreenState extends State<FriendRequestsScreen> {
                 IconButton(
                   icon: const Icon(Icons.close, color: Colors.red),
                   onPressed: () async {
-                    await ServiceAPI().deleteFriend(UserManager.currentUser!.token,_friendRequesterList[index].token);
+                    await ServiceAPI().deleteFriend(UserManager.currentUser!.token,_friendRequesterList[index].idFriend!);
                     _loadFriendRequests();
                     setState(() {
                       _friendRequesterList.removeAt(index);
