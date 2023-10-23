@@ -1,11 +1,11 @@
 import 'package:gameforge_app/services/date_time_parser.dart';
-import 'package:uuid/uuid.dart';
+
 
 class User {
   String email;
   String pseudo;
   String token;
-  DateTime? tokenDate;
+  DateTime tokenDate;
 
   User({
     required this.email,
@@ -29,7 +29,7 @@ class User {
       email: json['email'],
       pseudo: json['pseudo'],
       token: json['token'],
-      tokenDate: dateTimeParser.parseDate(json['tokenDate']),
+      tokenDate:dateTimeParser.tokenParseDate(json['tokenDate']),
     );
   }
 

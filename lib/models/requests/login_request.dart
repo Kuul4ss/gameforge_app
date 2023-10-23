@@ -12,5 +12,4 @@ class LoginRequest{
         "pseudo": pseudo,
         "password": password,
       };
-
 }
