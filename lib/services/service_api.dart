@@ -10,7 +10,7 @@ import '../models/entities/user.dart';
 class ServiceAPI{
   final String baseURLLocal = "http://localhost:4000/gameforge-api";
   final String baseURLEmul = "http://172.29.80.1:4000/gameforge-api";
-  final String baseURL="http://gameforge-api.barlords.fr/gameforge-api/";
+  final String baseURL="http://gameforge-api.barlords.fr/gameforge-api";
   final dio = Dio();
 
   Future<Either<User,String>> connection(LoginRequest loginRequest) async {
